@@ -1,15 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
 import Habit from "../models/Habit.js";
-// import { authMiddleware } from "../middleware/auth.js";
+import { authMiddleware } from "../middleware/auth.js";
 
 const router = express.Router();
 
-// router.use(authMiddleware);
-
 router.use((req, res, next) => {
   console.log("🚨🚨🚨 DUMMY USER MIDDLEWARE IS WORKING 🚨🚨🚨");
-  req.user = { id: "000000000000000000000001" }; // Dummy user ID
+  req.user = { id: "000000000000000000000001" };
   next();
 });
 
