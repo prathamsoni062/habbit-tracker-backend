@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173"], // Allow Vite frontend
+    origin: ["http://localhost:5173", "http://127.0.0.1:5173","https://habbit-tracker-virid.vercel.app/"], // Allow Vite frontend
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     credentials: true,
   })
